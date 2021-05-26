@@ -19,6 +19,8 @@ struct NewTaskItemView: View {
     
     @Binding var isShowing: Bool
     
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    
     //MARK: - Body
     var body: some View {
         VStack(alignment: .center, spacing: nil, content: {
@@ -27,7 +29,7 @@ struct NewTaskItemView: View {
             VStack(alignment: .center, spacing: 16, content: {
                 TextField("New Task", text: $task)
                     .padding()
-                    .background(Color(UIColor.systemGray6))
+                    .background(isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground))
                     .cornerRadius(10)
                     .foregroundColor(.pink)
                     .font(.system(size: 24, weight: .bold, design: .rounded))
@@ -49,7 +51,7 @@ struct NewTaskItemView: View {
             })//VSTACK
             .padding(.horizontal)
             .padding(.vertical, 20)
-            .background(Color.white)
+            .background(isDarkMode ? Color(UIColor.secondarySystemBackground) : Color.white)
             .cornerRadius(16)
             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.7), radius: 24, x: 3, y: 3)
             .frame(maxWidth: 640)
