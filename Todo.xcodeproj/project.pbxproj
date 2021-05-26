@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E038897265E0AD300C6028B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E038896265E0AD300C6028B /* Launch Screen.storyboard */; };
+		6E16A860265E125E0012106F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E16A85F265E125E0012106F /* Utils.swift */; };
+		6E16A863265E12760012106F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E16A862265E12760012106F /* Constants.swift */; };
+		6E226E15265E042500300443 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E226E12265E042500300443 /* sound-rise.mp3 */; };
+		6E226E16265E042500300443 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E226E13265E042500300443 /* sound-ding.mp3 */; };
+		6E226E17265E042500300443 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E226E14265E042500300443 /* sound-tap.mp3 */; };
 		6EB93DDB265E017B00C68188 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB93DDA265E017B00C68188 /* TodoApp.swift */; };
 		6EB93DDD265E017B00C68188 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB93DDC265E017B00C68188 /* ContentView.swift */; };
 		6EB93DDF265E017E00C68188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EB93DDE265E017E00C68188 /* Assets.xcassets */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E038896265E0AD300C6028B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6E16A85F265E125E0012106F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		6E16A862265E12760012106F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6E226E12265E042500300443 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
+		6E226E13265E042500300443 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
+		6E226E14265E042500300443 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 		6EB93DD7265E017B00C68188 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB93DDA265E017B00C68188 /* TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		6EB93DDC265E017B00C68188 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +49,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E226E11265E042500300443 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				6E226E12265E042500300443 /* sound-rise.mp3 */,
+				6E226E13265E042500300443 /* sound-ding.mp3 */,
+				6E226E14265E042500300443 /* sound-tap.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		6E226E19265E052800300443 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6EB93DDA265E017B00C68188 /* TodoApp.swift */,
+				6EB93DDC265E017B00C68188 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6E2AB0D7265E05BF009FF72B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6EB93DE3265E017E00C68188 /* Persistence.swift */,
+				6EB93DE5265E017E00C68188 /* Todo.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E2AB0D9265E0618009FF72B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E2AB0DA265E0622009FF72B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6E16A85F265E125E0012106F /* Utils.swift */,
+				6E16A862265E12760012106F /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		6E2AB0DB265E0628009FF72B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		6E2AB0DC265E064F009FF72B /* Style */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		6EB93DCE265E017B00C68188 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +126,17 @@
 		6EB93DD9265E017B00C68188 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				6EB93DDA265E017B00C68188 /* TodoApp.swift */,
-				6EB93DDC265E017B00C68188 /* ContentView.swift */,
+				6E226E19265E052800300443 /* App */,
+				6E226E11265E042500300443 /* Sound */,
+				6E2AB0D7265E05BF009FF72B /* Model */,
+				6E2AB0DC265E064F009FF72B /* Style */,
+				6E2AB0D9265E0618009FF72B /* View */,
+				6E2AB0DB265E0628009FF72B /* Extension */,
+				6E2AB0DA265E0622009FF72B /* Utility */,
 				6EB93DDE265E017E00C68188 /* Assets.xcassets */,
-				6EB93DE3265E017E00C68188 /* Persistence.swift */,
 				6EB93DE8265E017E00C68188 /* Info.plist */,
-				6EB93DE5265E017E00C68188 /* Todo.xcdatamodeld */,
 				6EB93DE0265E017E00C68188 /* Preview Content */,
+				6E038896265E0AD300C6028B /* Launch Screen.storyboard */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -132,7 +206,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E038897265E0AD300C6028B /* Launch Screen.storyboard in Resources */,
+				6E226E16265E042500300443 /* sound-ding.mp3 in Resources */,
+				6E226E15265E042500300443 /* sound-rise.mp3 in Resources */,
 				6EB93DE2265E017E00C68188 /* Preview Assets.xcassets in Resources */,
+				6E226E17265E042500300443 /* sound-tap.mp3 in Resources */,
 				6EB93DDF265E017E00C68188 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,10 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E16A860265E125E0012106F /* Utils.swift in Sources */,
 				6EB93DE4265E017E00C68188 /* Persistence.swift in Sources */,
 				6EB93DDD265E017B00C68188 /* ContentView.swift in Sources */,
 				6EB93DDB265E017B00C68188 /* TodoApp.swift in Sources */,
 				6EB93DE7265E017E00C68188 /* Todo.xcdatamodeld in Sources */,
+				6E16A863265E12760012106F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
